@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ebafaf;
+}
+
+/* CSS for header styling with background image */
+header {
+    padding: 30px; /* Adjust the padding as needed */
+    background-image: url('temple.jpg'); /* Replace with the path to your background image */
+    background-size: cover; /* Ensures the image covers the entire header */
+    background-position: center; /* Centers the image in the header */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: #ffffff; /* Text color, adjust as needed */
+    text-align: center; /* Centers text inside the header */
+    font-size: 24px; /* Adjust font size as needed */
+}
+
+/* Optional: Add some styles for header elements like h1, h2, etc. */
+header h1 {
+    margin: 0; /* Removes default margin */
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.gallery {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+button {
+    background-color: lightblue;
+
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:o;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 0.5rem;
+}
+
+form input, form textarea {
+    padding: 0.5rem;
+    margin-top: 0.2rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 1rem;
+}
+/* Enable smooth scrolling across the entire document */
+html {
+    scroll-behavior: smooth;
+}
+/* General styles for sections */
+section {
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 800px;
+    position: relative; /* Required for the pseudo-element effect */
+    overflow: hidden;   /* Ensures pseudo-element does not overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Lightning effect for sections */
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    pointer-events: none; /* Prevents interference with section interaction */
+}
+
+section:hover::before {
+    transform: scaleX(1);
+}
+
+section:hover {
+  
+    transform: scale(1.02); /* Slightly enlarge the section */
+}
+
+/* Specific styling for sections */
+#home {
+    background: #f9f9f9;
+}
+
+#about {
+    background: #e9ecef;
+}
+
+#gallery {
+    background: #f1f3f5;
+}
+
+#contact {
+    background: #e2e6ea
+    
+}
+
+/* Additional styles for smooth transition effects */
+section h2 {
+    position: relative;
+    z-index: 2;
+}
+
+section p {
+    position: relative;
+    z-index: 2;
+}
+
+section button {
+    position: relative;
+    z-index: 2;
+}
+/* Basic header styling */
+header {
+    background: #333; /* Dark background for contrast */
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Ensures animation effects do not overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Header touch animation effect */
+header:hover {
+    background-color: #444; /* Slightly lighter background color on hover */
+ 
+    transform: scale(1.05); /* Slightly enlarges the header */
+}
+
+/* Header image styling */
+header img {
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+/* Header image animation on hover */
+header:hover img {
+    opacity: 0.8; /* Slight fade effect on hover */
+}
+
+/* Header nav styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Link hover effect */
+nav ul li a:hover {
+    color: #ffeb3b; /* Bright color for hover effect */
+}
+
+
+/* Image transition effects on hover */
+img:hover {
+    opacity: 0.8; /* Slight fade effect */
+    transform: scale(1.1); /* Slight zoom effect */
+    filter: brightness(1.2); /* Increase brightness */
+}
+
+/* Basic styling for footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed; /* Fixes the footer at the bottom */
+    bottom: 0;
+    width: 100%;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for showing/hiding */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(100%); /* Initially hidden below the viewport */
+}
+
+/* Class to show the footer */
+footer.show {
+    opacity: 1; /* Make the footer visible */
+    transform: translateY(0);
+    padding: 5px; /* Move the footer into view */
+}
+
